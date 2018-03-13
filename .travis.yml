@@ -2,7 +2,7 @@
 language: c
 
 before_install:
-  - sudo apt-add-repository 'http://repos.moxielogic.org:7114/MoxieLogic/dists moxiedev main' -y
+  - sudo apt-add-repository 'http://repos.moxielogic.org:7114/MoxieLogic dist moxiedev' -y
   - sudo apt-get update -q
   - sudo apt-get install -y moxielogic-moxie-elf-gcc moxielogic-moxie-elf-sim
 
