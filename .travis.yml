@@ -1,0 +1,11 @@
+---
+language: c
+
+before_install:
+  - apt-add-repository http://repos.moxielogic.org:7114/MoxieLogic moxiedev main
+  - apt-get install -y moxielogic-moxie-elf-gcc moxielogic-moxie-elf-sim
+
+script:
+  - /opt/moxielogic/bin/moxie-elf-gcc -v
+
+
