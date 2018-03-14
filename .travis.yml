@@ -4,7 +4,7 @@ language: c
 before_install:
   - echo 'deb http://repos.moxielogic.org:7114/MoxieLogic moxiedev main' | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -q
-  - sudo apt-get install -y --allow-unauthenticated moxielogic-moxie-elf-gcc moxielogic-moxie-elf-sim
+  - sudo apt-get install -y --allow-unauthenticated moxielogic-moxie-elf-gcc moxielogic-moxie-elf-gdb-sim dejagnu
 
 script:
   - /opt/moxielogic/bin/moxie-elf-gcc -v
