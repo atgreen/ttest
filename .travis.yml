@@ -2,9 +2,9 @@
 language: c
 
 before_install:
-  - sudo apt-add-repository 'http://repos.moxielogic.org:7114/MoxieLogic dist moxiedev' -y
+  - echo 'http://repos.moxielogic.org:7114/MoxieLogic moxiedev main' | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -q
-  - sudo apt-get install -y moxielogic-moxie-elf-gcc moxielogic-moxie-elf-sim
+  - sudo apt-get install -y --allow-unauthenticated moxielogic-moxie-elf-gcc moxielogic-moxie-elf-sim
 
 script:
   - /opt/moxielogic/bin/moxie-elf-gcc -v
